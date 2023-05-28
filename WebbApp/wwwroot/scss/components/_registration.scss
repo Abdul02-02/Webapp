@@ -1,0 +1,95 @@
+.rf-form {
+    padding: 80px 0 60px 0;
+
+    @include lg {
+        padding: 60px 0;
+    }
+
+    .container {
+        border: 0px solid $color-dark-5;
+        padding: 30px;
+
+
+        @include md {
+            border: 1px solid $color-dark-5;
+        }
+    }
+
+    .title {
+        margin-bottom: 40px;
+    }
+
+    form {
+        display: grid;
+        column-gap: 30px;
+        row-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                                "first name"
+                                "last name"
+                                "street name"
+                                "Postal code"
+                                "city"
+                                "mobile"
+                                "company"
+                                "email"
+                                "password"
+                                "confirm password"
+                                "upload profile image"
+                                "terms"
+                                "button";
+        
+        @include lg {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:    "firstName lastName"
+                                    "streetName"
+                                    "PostalCode City"
+                                    "Mobile company"
+                                    "email"
+                                    "password"
+                                    "confirm password"
+                                    "upload profile image"
+                                    "terms terms"
+                                    "button button";
+        }
+
+        .firstName{ grid-area: firstName; }
+        .lastName{ grid-area: lastName; }
+        .streetName{ grid-area: streetName; }
+        .PostalCode{ grid-area: PostalCode; }
+        .city{ grid-area: city; }
+        .mobile{ grid-area: mobile; }
+        .company{ grid-area: company; }
+        .email          { grid-area: email; }
+        .password    { grid-area: password; }
+        .confirmPassword    { grid-area: confirmPassword;}
+        .uploadProfileImage{ grid-area: uploadProfileImage;}
+        .terms          { grid-area: terms;  margin: 10px 0; }
+        .button        { grid-area: button; margin-top: 200px;}
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            grid-area: button;
+
+            @include lg {
+                display: flex;
+                justify-self: flex-start;
+            }
+        }
+
+        .account-link{
+            font-family: $font-poppins;
+            border: 1px solid $color-dark-1;
+            color: $color-white;
+            display: flex; 
+            justify-content: center;
+            padding: 20px 0;
+            text-decoration: none;
+            font-weight: $font-weight-medium;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+﻿@model ContactEntity
+<section class="contact-form Index" method="post">
+    <div class="container">
+        <div class="title">Contact Us</div>
+
+        <form novalidate asp-action="Index" method="post">
+            <div class="name form-group">
+                <label asp-for="Name">Your Name</label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="email form-group">
+                <label asp-for="Email">Your Email</label>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="phoneNumber form-group">
+                <label asp-for="PhoneNumber">Phone Number (optional)</label>
+                <input asp-for="PhoneNumber" />
+            </div>
+            <div class="companyName form-group">
+                <label asp-for="Company">Company (optional)</label>
+                <input asp-for="Company" />
+            </div>
+            <div class="message form-group">
+                <label asp-for="Message">Message*</label>
+                <textarea asp-for="Message"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <button class="btn-theme">Submit</button>
+        </form>
+    </div>
+</section>

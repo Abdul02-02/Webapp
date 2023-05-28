@@ -1,0 +1,30 @@
+﻿@model UserLoginViewModel
+
+<section class="login-form">
+    <div class="container">
+        <div class="title">Plase Login To Your Account</div>
+
+        <form method="post" novalidate asp-route-ReturnUrl="@Model.ReturnUrl">
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+
+            <div class="email form-group">
+                <label asp-for="Email">
+                    E-mail *
+                    <a asp-action="index" asp-controller="register">Don't have an Account yet?</a>
+
+                </label>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+
+            </div>
+            <div class="password form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <button class="btn-theme">Submit</button>
+        </form>
+    </div>
+</section>
