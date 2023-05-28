@@ -1,0 +1,35 @@
+@import '../core/_colors.scss';
+@import '../core/_fonts.scss';
+@import '../core/_mixins.scss';
+
+
+h1{
+    margin-top:1rem;
+}
+.admin-content {
+    padding: 80px 0 60px 0;
+
+    @include lg {
+        padding: 60px 0;
+    }
+
+    .container1 {
+        border: 0px solid $color-dark-5;
+        padding: 30px;
+
+
+        @include md {
+            border: 1px solid $color-dark-5;
+        }
+    }
+
+    .container2 {
+        border: 0px solid $color-dark-5;
+        padding: 30px;
+
+
+        @include md {
+            border: 1px solid $color-dark-5;
+        }
+    }
+    }
